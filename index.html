@@ -12,13 +12,13 @@
     <link rel="stylesheet" href="./css/tjtc.css">
 </head>
 <body ng-controller="Main">
-    <div class="top-section">
+    <!-- <div class="top-section">
         <div class="profile">
             <img src="https://avatars3.githubusercontent.com/u/2633184" alt="">
         </div>
         <div class="cl"></div>
-    </div>
-    <ul class="list">
+    </div> -->
+    <ul class="list ng-cloak">
         <li ng-repeat="blog in blogs | reverse" style="color: {{blog.mood}};" ng-hide="!blog.title">
             <h1>{{blog.title}}</h1>
             <span>{{blog.timestamp | timeAgo}}</span>
