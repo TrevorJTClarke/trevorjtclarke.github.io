@@ -1,0 +1,61 @@
+{
+  "name": "trevorjtclarke",
+  "version": "0.0.1",
+  "description": "Personal projects site for me :)",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app",
+    "test": "echo \"Error: no tests specified\" && exit 1",
+    "postinstall": "which sass || gem install sass",
+    "dev": "npm run dev:init && npm run dev:server",
+    "dev:init": "webpack --progress --hide-modules",
+    "dev:server": "webpack-dev-server --open",
+    "css": "npm run css:lint && npm run css:compile",
+    "css:lint": "sass-lint -v",
+    "css:compile": "postcss -u autoprefixer -u cssnano -u css-mqpacker -r bundles/main.*.css",
+    "js": "uglifyjs build/*.js --source-map build/*.js.map --comments",
+    "build": "webpack --progress --hide-modules && npm run js && npm run css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TrevorJTClarke/trevorjtclarke.github.io.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TrevorJTClarke/trevorjtclarke.github.io/issues"
+  },
+  "homepage": "https://github.com/TrevorJTClarke/trevorjtclarke.github.io#readme",
+  "devDependencies": {
+    "autoprefixer": "^7.1.5",
+    "aws-sdk": "^2.6.12",
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-es2015": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.16",
+    "css-loader": "^0.28.4",
+    "css-mqpacker": "^6.0.1",
+    "cssnano": "^3.10.0",
+    "eslint": "^3.8.1",
+    "express": "^4.16.2",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "html-loader": "^0.5.0",
+    "html-webpack-plugin": "^2.29.0",
+    "json-loader": "^0.5.7",
+    "livereload": "^0.6.0",
+    "node-sass": "^3.10.1",
+    "postcss-cli": "^2.6.0",
+    "postcss-cssnext": "^3.0.2",
+    "postcss-import": "^10.0.0",
+    "postcss-loader": "^2.0.6",
+    "postcss-sass": "^0.2.0",
+    "raw-loader": "^0.5.1",
+    "sass-lint": "^1.10.2",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "uglify-js": "^2.7.4",
+    "webpack": "^3.4.1",
+    "webpack-dev-server": "^2.6.1"
+  }
+}

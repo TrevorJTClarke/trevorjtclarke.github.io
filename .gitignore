@@ -1,0 +1,10 @@
+.badideas
+.sass-cache
+*.scssc
+*.DS_Store
+*.log
+node_modules
+
+.elasticbeanstalk
+
+build

@@ -1,32 +1,34 @@
 <!DOCTYPE html>
-<html ng-app="tjtc">
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Trevor Clarke - JS Developer</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.17/angular.min.js"></script>
-    <script src="https://cdn.firebase.com/js/client/1.0.18/firebase.js"></script>
-    <script src="https://cdn.firebase.com/libs/angularfire/0.8.0/angularfire.min.js"></script>
-    <script src="./js/tjtc.js"></script>
-    <!-- // <script src="./js/triangles.js"></script> -->
-    <link rel="stylesheet" href="./css/tjtc.css">
-</head>
-<body ng-controller="Main">
-    <!-- <div class="top-section">
-        <div class="profile">
-            <img src="https://avatars3.githubusercontent.com/u/2633184" alt="">
-        </div>
-        <div class="cl"></div>
-    </div> -->
-    <ul class="list ng-cloak">
-        <li ng-repeat="blog in blogs | reverse" style="color: {{blog.mood}};" ng-hide="!blog.title">
-            <h1>{{blog.title}}</h1>
-            <span>{{blog.timestamp | timeAgo}}</span>
-        </li>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Trevor Clarke - Software Developer</title>
+  <style>body{background:linear-gradient(180deg,#e1e1e1 0,#d7d6d4);display:flex;flex-direction:column;font-family:Helvetica,sans-serif;margin:0;min-height:100vh;padding:0}tc-profile{background:#227aba;background:linear-gradient(180deg,#f7f6f6 0,#ebe9e9);display:flex;flex-direction:row-reverse;justify-content:space-between;position:relative}user-details{position:absolute;left:5vw;top:50%}user-details h1,user-details h3{margin:0;padding:0}user-details h1{font-size:7vw;font-weight:100}user-details h3{font-size:3vw;font-weight:300;line-height:3.7vw;margin-top:12px;text-transform:capitalize}user-avatar{border-radius:50%;position:relative}user-avatar:after{background:url("https://tjtcblog.s3.amazonaws.com/p/images/trevor2.jpg") 0 0 no-repeat;background-size:100%;content:"";opacity:.3;position:absolute;height:50vw;left:0;top:0;width:100%;-webkit-filter:grayscale(50%) blur(3px);filter:grayscale(50%) blur(3px);-webkit-clip-path:polygon(0 0,10% 0,100% 100%,90% 100%);clip-path:polygon(0 0,10% 0,100% 100%,90% 100%)}user-avatar img{display:block;height:50vw;-webkit-clip-path:polygon(100% 0,10% 0,100% 100%);clip-path:polygon(100% 0,10% 0,100% 100%)}.links{padding:20px 0}.links ul{display:flex;justify-content:center;margin:0;padding:0}.links ul li{list-style:none;padding:0 5px}.link{color:#227aba;font-size:10pt;font-weight:700;text-transform:uppercase;padding:12px;border:1px solid #227aba;border-radius:3px;text-decoration:none;display:block}</style>
+<body>
+  <header>
+    <tc-profile>
+      <user-details>
+        <h1>Trevor Clarke</h1>
+        <h3>Passionate Software Engineer<br>3D Designer / Maker / Geek</h3>
+      </user-details>
+      <user-avatar>
+        <img src="https://tjtcblog.s3.amazonaws.com/p/images/trevor2.jpg" alt="">
+      </user-avatar>
+    </tc-profile>
+  </header>
+  <section class="links">
+    <ul>
+      <li>
+        <a class="link" href="mailto:besnoid@gmail.com?subject=Portfolio%20Introduction&body=Hello%20Trevor">Email</a>
+      </li>
+      <li>
+        <a class="link" href="https://github.com/TrevorJTClarke" target="_blank">Github</a>
+      </li>
+      <li>
+        <a class="link" href="https://twitter.com/trevorjtclarke" target="_blank">Twitter</a>
+      </li>
     </ul>
-    <!-- <div class="bottom-section">
-        <h1>{{weather.hourly.data[0].temperature | number:0}}</h1>
-        <small>{{weather.minutely.summary}}</small>
-    </div> -->
+  </section>
 </body>
 </html>

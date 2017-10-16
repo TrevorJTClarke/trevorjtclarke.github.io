@@ -1,0 +1,102 @@
+@import 'variables';
+@import 'mixins';
+
+.btn {
+  background: $primary;
+  border: 2px solid transparent;
+  border-radius: 40px;
+  color: $white;
+  cursor: pointer;
+  font-size: 9pt;
+  font-weight: 600;
+  letter-spacing: $letter-spacing;
+  margin: 0;
+  outline: none;
+  padding: 12px 34px;
+  text-align: center;
+  text-transform: uppercase;
+
+  &.icon,
+  .icon {
+    &::before {
+      font-size: 100%;
+    }
+  }
+
+  &.btn-disabled {
+    cursor: not-allowed;
+    opacity: .4;
+  }
+}
+
+// UNIVERSAL HIERARCHY
+.btn-primary {
+
+  &.btn-outlined {
+    background-color: transparent;
+    border-color: $primary;
+    color: $primary;
+  }
+
+  &.text-only {
+    background-color: transparent;
+    border-color: transparent;
+    color: $primary;
+  }
+}
+
+.btn-secondary {
+  background: $white;
+  color: $primary;
+
+  &.btn-outlined {
+    background-color: transparent;
+    border-color: $white;
+    color: $white;
+  }
+
+  &.text-only {
+    background-color: transparent;
+    border-color: transparent;
+    color: $grey02;
+  }
+}
+
+.btn-error {
+  background: $error;
+  color: $white;
+
+  &.btn-outlined {
+    background-color: transparent;
+    border-color: $error;
+    color: $error;
+  }
+}
+
+.btn-icon-right {
+  position: relative;
+
+  .icon {
+    position: absolute;
+    right: 12px;
+    top: calc(50% - 7px);
+
+    &::before {
+      font-size: 11pt;
+    }
+  }
+}
+
+.btn-icon-left {
+  position: relative;
+
+  .icon {
+    left: 12px;
+    position: absolute;
+    top: calc(50% - 7px);
+
+    &::before {
+      font-size: 11pt;
+    }
+  }
+}

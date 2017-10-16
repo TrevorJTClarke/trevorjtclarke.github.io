@@ -1,0 +1,31 @@
+/**
+ * Colors
+ *
+ */
+$black:                     #222 !default;
+$white:                     #fff !default;
+$primary:                   #227aba !default; // Better!!
+
+
+/**
+ * Greyscale Colors
+ */
+$grey00:                          #262626 !default; // Super Dark Grey
+$grey01:                          #333 !default; // Dark Grey
+$grey02:                          #686868 !default; // Darkish Grey
+$grey04:                          #9b9b9b !default; // Middle Grey (Not Middle Earth)
+$grey07:                          #d7d6d4 !default; // Medium Grey
+$grey08:                          #e1e1e1 !default; // light Grey
+$grey09:                          #f7f6f6 !default; // super light Grey
+
+/**
+ * Specific Colors
+ */
+$background:                      #f6f6f6 !default;
+
+/**
+ * Social Media Colors
+ */
+$social-twitter:                  #00aced !default;
+$social-email:                    $grey04 !default;
+$social-link:                     $grey04 !default;

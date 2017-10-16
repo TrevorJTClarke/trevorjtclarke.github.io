@@ -1,0 +1,12 @@
+files:
+  include:
+    - 'scss/**/**/**/*.scss'
+  # ignore:
+  #   - 'platform/components/core/_reset.scss'
+rules:
+  indentation:
+    - 2
+    -
+      size: 2
+  no-css-comments:
+    - 0

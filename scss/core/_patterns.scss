@@ -1,0 +1,78 @@
+
+// Patterns
+// --------------------------------------------------
+// The following are take directly from:
+// http://lea.verou.me/css3patterns/#
+//
+// Made into mixins for ease of use!
+// Example: @include pt-shippo(#foo, 80px);
+
+
+// USE: @include pt-shippo(#foo, 80px);
+@mixin pt-shippo($bg-color: $grey01, $size: 80px) {
+  background-color: $bg-color;
+  background-image:
+  radial-gradient(closest-side, transparent 98%, transparentize($black, .97) 99%),
+  radial-gradient(closest-side, transparent 98%, transparentize($black, .97) 99%);
+  background-position: 0 0, $size / 2 $size / 2;
+  background-size: $size $size;
+}
+
+// USE: @include pt-seigaiha(#foo, #ccc, 100px);
+@mixin pt-seigaiha($bg-color: $gray01, $fr-color: $lightgrey, $size: 100px) {
+  background-color: $fr-color;
+  background-image:
+  radial-gradient(circle at 100% 150%, $fr-color 24%, $bg-color 25%, $bg-color 28%, $fr-color 29%, $fr-color 36%, $bg-color 36%, $bg-color 40%, transparent 40%, transparent),
+  radial-gradient(circle at 0    150%, $fr-color 24%, $bg-color 25%, $bg-color 28%, $fr-color 29%, $fr-color 36%, $bg-color 36%, $bg-color 40%, transparent 40%, transparent),
+  radial-gradient(circle at 50%  100%, $bg-color 10%, $fr-color 11%, $fr-color 23%, $bg-color 24%, $bg-color 30%, $fr-color 31%, $fr-color 43%, $bg-color 44%, $bg-color 50%, $fr-color 51%, $fr-color 63%, $bg-color 64%, $bg-color 71%, transparent 71%, transparent),
+  radial-gradient(circle at 100% 50%, $bg-color 5%, $fr-color 6%, $fr-color 15%, $bg-color 16%, $bg-color 20%, $fr-color 21%, $fr-color 30%, $bg-color 31%, $bg-color 35%, $fr-color 36%, $fr-color 45%, $bg-color 46%, $bg-color 49%, transparent 50%, transparent),
+  radial-gradient(circle at 0    50%, $bg-color 5%, $fr-color 6%, $fr-color 15%, $bg-color 16%, $bg-color 20%, $fr-color 21%, $fr-color 30%, $bg-color 31%, $bg-color 35%, $fr-color 36%, $fr-color 45%, $bg-color 46%, $bg-color 49%, transparent 50%, transparent);
+  background-size: $size $size / 2;
+}
+
+// USE: @include pt-diagonal-stripes(#foo, 35px, 45deg);
+@mixin pt-diagonal-stripes($bg-color: $gray01, $size: 35px, $deg: 45deg) {
+  background-color: $bg-color;
+  background-image: repeating-linear-gradient($deg, transparent, transparent $size, transparentize($white, .9) $size, transparentize($white, .9) $size * 2);
+}
+
+// USE: @include pt-honey-comb(#foo);
+@mixin pt-honey-comb($bg-color: $gray01) {
+  background:
+  radial-gradient(circle farthest-side at 0% 50%, $bg-color 23.5%, transparent 0) 21px 30px,
+  radial-gradient(circle farthest-side at 0% 50%, darken($bg-color, 5%) 24%, transparent 0) 19px 30px,
+  linear-gradient($bg-color 14%, transparent 0, transparent 85%, $bg-color 0) 0 0,
+  linear-gradient(150deg, $bg-color 24%, darken($bg-color, 5%) 0, darken($bg-color, 5%) 26%, transparent 0, transparent 74%, darken($bg-color, 5%) 0, darken($bg-color, 5%) 76%, $bg-color 0)0 0,
+  linear-gradient(30deg, $bg-color 24%, darken($bg-color, 5%) 0, darken($bg-color, 5%) 26%, transparent 0, transparent 74%, darken($bg-color, 5%) 0, darken($bg-color, 5%) 76%, $bg-color 0)0 0,
+  linear-gradient(90deg, darken($bg-color, 5%) 2%, $bg-color 0, $bg-color 98%, darken($bg-color, 5%) 0%)0 0 $bg-color;
+  background-size: 40px 60px;
+}
+
+// USE: @include pt-carbon(#foo, 16px);
+@mixin pt-carbon($bg-color: $grey01, $size: 16px) {
+  background:
+  radial-gradient(transparentize($black, .9) 15%, transparent 16%) 0 0,
+  radial-gradient(transparentize($black, .9) 15%, transparent 16%) $size / 2 $size / 2,
+  radial-gradient(transparentize($white, .9) 15%, transparent 20%) 0 1px,
+  radial-gradient(transparentize($white, .9) 15%, transparent 20%) $size / 2 $size / 2 + 1;
+  background-color: $bg-color;
+  background-size: $size $size;
+}
+
+// USE: @include pt-weave(#foo, #ccc, 100px, 8px);
+@mixin pt-weave($bg-color: $gray01, $fr-color: $white, $size: 64px) {
+  background:
+  linear-gradient(135deg, $bg-color 11px, $fr-color 11px, $fr-color 12px, transparent 12px, transparent 34px, $fr-color 34px, $fr-color 35px, transparent 35px),
+  linear-gradient(225deg, $bg-color 11px, $fr-color 11px, $fr-color 12px, transparent 12px, transparent 34px, $fr-color 34px, $fr-color 35px, transparent 35px) 0 32px;
+  background-color: $bg-color;
+  background-size: $size $size * 2;
+}
+
+
+// USE: @include pt-microbial(#foo, #fff);
+@mixin pt-microbial($bg-color: $gray01, $fr-color: $white) {
+  background:
+  radial-gradient(circle at 0% 50%, transparentize($white, 1) 9px, $fr-color 10px, transparentize($white, 1) 11px) 0 10px,
+  radial-gradient(at 100% 100%, transparentize($white, 1) 9px, $fr-color 10px, transparentize($white, 1) 11px), $bg-color;
+  background-size: 20px 20px;
+}

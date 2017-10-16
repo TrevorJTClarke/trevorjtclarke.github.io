@@ -1,0 +1,31 @@
+@import '../core/variables';
+@import '../core/mixins';
+
+.links {
+  padding: 20px 0;
+
+  ul {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style: none;
+      padding: 0 5px;
+    }
+  }
+
+}
+
+.link {
+  color: $primary;
+  font-size: 10pt;
+  font-weight: $bold;
+  text-transform: uppercase;
+  padding: 12px;
+  border: 1px solid $primary;
+  border-radius: 3px;
+  text-decoration: none;
+  display: block;
+}

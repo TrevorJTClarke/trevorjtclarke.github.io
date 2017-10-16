@@ -1,0 +1,21 @@
+// Variables Styles
+// Defaults
+$gutter: 										      12px !default;
+$border-radius:                   0 !default;
+
+// Responsive:
+$mobile:                          480px !default; // NOTE: Try not to use, since its mobile first!
+$tablet:                          760px !default;
+$desktop:                         1024px !default;
+
+// Fontssss
+$sans-serif:                      Helvetica, sans-serif !default; //weights ~ 400,600,700
+$font-size-base:                  12pt !default;
+$font-size-large:                 16pt !default;
+$font-size-small:                 8.5pt !default;
+$regular:                         400 !default;
+$semibold:                        600 !default;
+$bold:                            700 !default;
+
+// Images:
+$base-cdn-url:                    'https://tjtcblog.s3.amazonaws.com/p/images/' !default;
