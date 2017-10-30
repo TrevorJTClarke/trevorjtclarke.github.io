@@ -4,7 +4,7 @@
   "description": "Personal projects site for me :)",
   "main": "app.js",
   "scripts": {
-    "start": "node app",
+    "start": "npm run dev",
     "test": "echo \"Error: no tests specified\" && exit 1",
     "postinstall": "which sass || gem install sass",
     "dev": "npm run dev:init && npm run dev:server",
